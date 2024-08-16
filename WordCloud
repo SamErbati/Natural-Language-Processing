@@ -1,0 +1,40 @@
+# Impoorting the necessary libraries: 
+import nltk
+from nltk.corpus import stopwords
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+nltk.download('stopwords')
+
+# Let's say we want to analyse the following text:
+text = "Recent advancements in AI have led to remarkable improvements in natural language processing, enabling machines to understand and generate human-like text. Breakthroughs in deep learning and neural networks have also enhanced computer vision, allowing AI to outperform humans in tasks like image recognition and autonomous driving. Additionally, AI systems are increasingly being integrated into industries such as healthcare, finance, and education, transforming them with smarter decision-making and automation."
+
+# Split the text into words
+words = text.split()
+
+# Remove Stopwords
+stop_words = set(stopwords.words('english'))
+
+# Add custom stopwords
+custom_stopwords = {'','plot','characters','ending'}
+stop_words.update(custom_stopwords)
+
+# Filter out stopwords
+filtered_words = [word for word in words if word.lower() not in stop_words]
+
+# Join the filtered words back into a single string
+filtered_text = ' '.join(filtered_words)
+
+# Generate WorldCloud
+wordcloud = WordCloud(width= 800, height=800,
+                      background_color='black',
+                      stopwords=stop_words,
+                      min_font_size=10).generate(filtered_text)
+
+# Plot the WordCloud object
+plt.figure(figsize=(8,8), facecolor=None)
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.tight_layout(pad=0)
+plt.show()
+
