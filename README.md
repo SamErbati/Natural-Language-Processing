@@ -6,4 +6,5 @@ It's a powerful Python library used for working with human language data (text) 
 
 # First Project is building a WordCloud: 
 A word cloud visually represents the frequency of words in a given text, where the size of each word indicates its frequency or importance. This tool is often used for text analysis, allowing users to quickly identify the most common or significant words in a document, dataset, or corpus. The WordCloud library allows customization of fonts, shapes, and colors for aesthetic flexibility.
-![Figure_1](https://github.com/user-attachments/assets/7fbd6f96-4a74-49b2-b61b-b358376fecb7)
+
+![Figure_1](https://github.com/user-attachments/assets/d60fca79-3ffa-4d8d-ade9-db38cfaa29f9)
